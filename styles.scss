@@ -1,0 +1,113 @@
+@mixin center {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    margin: 0;
+    user-select: none;
+    @include center();
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#main {
+    & {
+        @include center();  
+        font-family: 'Josefin Sans', sans-serif;
+        display: grid;
+        column-gap: 10px;
+        row-gap: 20px;
+        grid-template-columns: repeat(auto-fit, 420px);
+    }
+
+    div {
+        & {
+            border: 0px solid black;
+            @include center();
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 3px 0px black inset;
+        }
+
+        
+
+        * {
+            border: 0px solid transparent;
+            box-shadow: 0px 0px 0px 0px transparent;
+        }
+
+
+    }
+}
+
+nav {
+    & {
+        width: auto;
+        top: 0%;
+        overflow: hidden;
+        position: sticky;
+        background-color: white;
+        text-align: center;
+        padding: 30px;
+    }
+
+    div {
+        * {
+
+            & {
+                min-width: auto;  
+                max-width: 400px;
+                background-color: transparent;
+                border-radius: 4px;
+                border: 0px solid transparent;
+                box-shadow: 0px 0px 2px 0px black inset;
+                padding: 10px;
+                transition: all 0.3s ease-in-out;
+            }
+
+            &:hover {
+                min-width: auto;  
+                max-width: 400px;
+                
+                border-radius: 4px;
+                border: 0px solid transparent;
+                padding: 10px;
+                transition: all 0.3s ease-in-out;
+                background-color: black;
+                color: white;
+                box-shadow: 0px 0px 2px 1px white inset;
+            }
+
+        }
+
+        button {
+            & {
+                background-color: transparent;
+                @include center();
+                width: 80px;
+            }
+
+
+        }
+        input{
+            width: 50%;
+        }
+
+
+    }
+}
+
+img {
+    & {
+        
+        height: 300px;
+        width: 300px;
+    }
+
+    &:hover{
+        filter: opacity(80%); 
+    }
+
+
+}
